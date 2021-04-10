@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Pedra, Papel e Tesoura</title>
+</head>
+<body>
+
+  <div class="intro">
+    <h1>Pedra, Papel e Tesoura</h1>
+    <p>Este é um simples jogo de pedra, papel e tesoura. Estas são as regras:</p>
+      <ul>
+        <li>Pedra ganha da tesoura, tesoura ganha do papel e o papel ganha da pedra.</li>
+        <li>Quem tiver mais pontos ao final de 5 rodadas ganha o jogo.</li>
+      </ul>
+      <p>Para começar, escolha entre pedra, papel ou tesoura na coluna ao lado esquerdo:</p>
+  </div>
+
+  <div class="scoreBoard">
+    <h2>Jogador</h2>
+
+    <span id="playerScore"></span>
+    <p>X</p>
+    <span id="enemyScore"></span>
+    
+    <h2>Computador</h2>
+  </div>
+
+  <section class="board">
+
+    <div class="playerOptions">
+      <button class="rock">Pedra</button>
+      <button class="paper">Papel</button>
+      <button class="scissors">Tesoura</button>
+    </div>
+
+    <div class="battleBoard">
+      <div class="playerSlot"></div>
+      <p>X</p>
+      <div class="enemySlot"></div>
+    </div>
+
+    <div class="enemyOptions">
+      <button class="rock" disabled>Pedra</button>
+      <button class="paper" disabled>Papel</button>
+      <button class="scissors" disabled>Tesoura</button>
+    </div>
+
+  </section>
+
+  <div class="result">
+    <p></p>
+  </div>
+
+</body>
+</html>

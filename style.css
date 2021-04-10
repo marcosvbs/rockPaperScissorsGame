@@ -1,0 +1,45 @@
+.intro {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.scoreBoard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.board {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playerOptions,.enemyOptions{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.battleBoard {
+    display: flex;
+    align-items: center;
+}
+
+.result {
+    display: flex;
+}
+
+.playerSlot, .enemySlot {
+    width: 80px;
+    height: 20px;
+    border: 1px solid #000000;
+
+    margin: 0 16px;
+
+    text-align: center;
+}
+
+scoreBoard h2 {
+    width: 200px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Pedra, Papel e Tesoura</title>
+</head>
+<body>
+
+  <div class="intro">
+    <a href="index.html" class="backLink">Voltar</a>
+    <h1>Pedra, Papel e Tesoura <img src="img/game_logo.svg" alt="Game Logo"></h1>
+    <span class='dividers'></span>
+  </div>
+
+  <div class="scoreBoard">
+    <h2>Jogador</h2>
+
+    <div class='score'>
+      <span id="playerScore"></span> - <span id="enemyScore"></span>
+    </div>
+    
+    <h2>Adversário</h2>
+  </div>
+
+  <div class="battleBoard">
+
+      <div class="playerSlot"></div><span>X</span><div class="enemySlot"></div>
+
+  </div>
+
+  <div class="result">
+    <p class="turnResult"></p>
+  </div>
+
+  <div class="playerOptions">
+
+    <button class="rock">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+        <g id="Retângulo_14" data-name="Retângulo 14" fill="none" stroke="#1c1c1e" stroke-width="2">
+          <rect width="28" height="28" rx="14" stroke="none"/>
+          <rect x="1" y="1" width="26" height="26" rx="13" fill="none"/>
+        </g>
+      </svg>Pedra     
+    </button>
+
+    <button class="paper">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+        <g id="Retângulo_14" data-name="Retângulo 14" fill="none" stroke="#1c1c1e" stroke-width="2">
+          <rect width="28" height="28" stroke="none"/>
+          <rect x="1" y="1" width="26" height="26" fill="none"/>
+        </g>
+      </svg>Papel
+    </button>
+
+    <button class="scissors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 32 28">
+        <g id="Caminho_1" data-name="Caminho 1" fill="none">
+          <path d="M16,0,32,28H0Z" stroke="none"/>
+          <path id="path" d="M 16 4.031137466430664 L 3.44636344909668 26 L 28.55363464355469 26 L 16 4.031137466430664 M 16 0 L 32 28 L 0 28 L 16 0 Z" stroke="none" fill="#1c1c1e"/>
+        </g>
+      </svg>Tesoura
+    </button>
+    
+  </div>
+
+  <div class="result">
+    <p class="gameResult"></p>
+  </div>
+
+</body>
+</html>

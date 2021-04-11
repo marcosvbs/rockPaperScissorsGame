@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="28" viewBox="0 0 104 28">
+  <g id="Grupo_23" data-name="Grupo 23" transform="translate(-183 -76)">
+    <g id="Polígono_1" data-name="Polígono 1" transform="translate(255 76)" fill="none">
+      <path d="M16,0,32,28H0Z" stroke="none"/>
+      <path d="M 15.99999904632568 4.031137466430664 L 3.44636344909668 26 L 28.55363464355469 26 L 15.99999904632568 4.031137466430664 M 15.99999904632568 0 L 32 28 L -1.9073486328125e-06 28 L 15.99999904632568 0 Z" stroke="none" fill="#ff453a"/>
+    </g>
+    <g id="Retângulo_14" data-name="Retângulo 14" transform="translate(219 76)" fill="none" stroke="#0a84ff" stroke-width="2">
+      <rect width="28" height="28" stroke="none"/>
+      <rect x="1" y="1" width="26" height="26" fill="none"/>
+    </g>
+    <g id="Retângulo_14-2" data-name="Retângulo 14" transform="translate(183 76)" fill="none" stroke="#ff9f0a" stroke-width="2">
+      <rect width="28" height="28" rx="14" stroke="none"/>
+      <rect x="1" y="1" width="26" height="26" rx="13" fill="none"/>
+    </g>
+  </g>
+</svg>

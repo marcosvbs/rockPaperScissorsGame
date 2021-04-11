@@ -17,7 +17,13 @@ const playerSlot = document.querySelector('.playerSlot');
 const enemySlot = document.querySelector('.enemySlot');
 const playerScoreSlot = document.getElementById('playerScore');
 const enemyScoreSlot = document.getElementById('enemyScore');
-const result = document.querySelector('.result p');
+const turnResult = document.querySelector('.turnResult');
+const gameResult = document.querySelector('.gameResult');
+
+playerScoreSlot.textContent = 0;
+enemyScoreSlot.textContent = 0;
+
+turnResult.textContent = ' ';
 
 let playerScore = 0;
 let enemyScore = 0;
@@ -25,10 +31,17 @@ let enemyScore = 0;
 let selectedOption;
 let enemySelectedOption;
 
-let numberOfTurns = 3;
+let numberOfTurns = 5;
 const maxPointsPerTurn = 1;
 
 let resetButton;
+
+const playerPointMessage = 'Ponto para o jogador!';
+const enemyPointMessage = 'Ponto para o Adversário!';
+const drawPointMessage = 'Empatou! Ninguem pontuou.';
+
+const playerVictoryMessage = 'O jogador ganhou!';
+const enemyVictoryMessage = 'O adversário ganhou!';
 
 //
 
@@ -51,15 +64,17 @@ function resetTheGame() {
     playerScore = 0;
     enemyScore = 0;
 
-    numberOfTurns = 3;
+    numberOfTurns = 5;
 
     playerSlot.textContent = ' ';
     enemySlot.textContent = ' ';
-    result.textContent = ' ';
+    turnResult.textContent = ' ';
+    gameResult.textContent = ' ';
 
     resetButton.parentNode.removeChild(resetButton);
 
     playerButtons.forEach(element => {
+        element.htmlElement.style.pointerEvents = "auto";
         element.htmlElement.disabled = false;
     });
 }
@@ -67,6 +82,7 @@ function resetTheGame() {
 function setGameOver() {
 
     playerButtons.forEach(element => {
+        element.htmlElement.style.pointerEvents = "none";
         element.htmlElement.disabled = true;
     });
 
@@ -81,12 +97,12 @@ function setGameOver() {
 function checkIfWin(playerScore, enemyScore) {
     if (Number(playerScore > enemyScore + numberOfTurns * maxPointsPerTurn))
     {
-        result.textContent = 'O jogador ganhou!';
+        gameResult.textContent = playerVictoryMessage;
         setGameOver();
     }
     else if (Number(enemyScore > playerScore + numberOfTurns * maxPointsPerTurn))
     {
-        result.textContent = 'O inimigo ganhou!';
+        gameResult.textContent = enemyVictoryMessage;
         setGameOver();
     }
 }
@@ -95,32 +111,32 @@ function compareOptions(selectedOption, enemySelectedOption) {
 
     if (selectedOption === 'Pedra' && enemySelectedOption === 'Tesoura')
     {
-        result.textContent = 'Ponto para o jogador!';
+        turnResult.textContent = playerPointMessage;
         playerScore++;
         numberOfTurns--;
     } 
 
     else if (selectedOption === 'Papel' && enemySelectedOption === 'Pedra')
     {
-        result.textContent = 'Ponto para o jogador!';
+        turnResult.textContent = playerPointMessage;
         playerScore++;
         numberOfTurns--;
     }
     
     else if (selectedOption === 'Tesoura' && enemySelectedOption === 'Papel')
     {
-        result.textContent = 'Ponto para o jogador!';
+        turnResult.textContent = playerPointMessage;
         playerScore++;
         numberOfTurns--;
     }
 
     else if (selectedOption === enemySelectedOption)
     {
-        result.textContent = 'Empatou!';
+        turnResult.textContent = drawPointMessage;
     }
 
     else {
-        result.textContent = 'Ponto para o computador!';
+        turnResult.textContent = enemyPointMessage;
         enemyScore++;
         numberOfTurns--;
     }

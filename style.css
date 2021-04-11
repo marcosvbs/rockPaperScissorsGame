@@ -1,6 +1,129 @@
+body {
+    background-color: #1C1C1E;
+    padding: 24px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #F2F2F7;
+    font-family: 'Poppins';
+    font-size: 32px;
+    padding: 0;
+    margin: 0 0 8px 0;
+}
+
+h2 {
+    color: #F2F2F7;
+    font-family: 'Poppins';
+    font-size: 21px;
+}
+
+.dividers {
+    height: 1px;
+    width: 100%;
+    background-color: #8E8E93;
+    border-radius: 100%;
+    padding: 0;
+    margin: 8px 0;
+}
+
+p {
+    color: #F2F2F7;
+    font-family: 'Roboto';
+    font-size: 14px;
+
+    padding: 0;
+    margin: 8px 0;
+}
+
+li {
+    color: #F2F2F7;
+    font-family: 'Roboto';
+    font-size: 14px;
+
+    padding: 0;
+    margin: 0 0 8px 0;
+}
+
+a {
+    color: #1C1C1E;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border-radius: 5px;
+    border: 1px solid #F2F2F7;
+
+    width: 100%;
+    max-width: 340px;
+    background-color: #F2F2F7;
+    margin: 8px 0;
+    padding: 8px 0;
+}
+
+a:hover {
+    color: #F2F2F7;
+    background-color: #1C1C1E;
+}
+
+.playerOptions img {
+    margin: 0 0 8px 0;
+}
+
+button {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    color: #1C1C1E;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border-radius: 5px;
+    border: 1px solid transparent;
+
+    width: 100%;
+    max-width: 340px;
+    background-color: #F2F2F7;
+    margin: 8px auto;
+    padding: 8px 0;
+}
+
+button:hover {
+    color: #F2F2F7;
+    background-color: #1C1C1E;
+    border: 1px solid #F2F2F7;
+}
+
+.backLink {
+    color: #F2F2F7;
+    text-align: left;
+    text-transform: none;
+    text-decoration: underline;
+    font-weight: 400;
+
+    background-color: #1C1C1E;
+    border: none;
+
+    width: 100%;
+    max-width: none;
+    margin: 0 0 8px 0;
+    padding: 8px 0;
+}
+
 .intro {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
 }
 
 .scoreBoard {
@@ -9,37 +132,118 @@
     align-items: center;
 }
 
-.board {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+.score, .battleBoard {
+    color: #F2F2F7;
+    font-family: 'Poppins';
+    font-size: 21px;
 }
 
-.playerOptions,.enemyOptions{
+.battleBoard span {
+    margin: 0 8px;
+}
+
+.playerOptions {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
 .battleBoard {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
     align-items: center;
 }
 
 .result {
     display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.turnResult {
+    min-height: 18px;
+}
+
+.gameResult {
+    color: #F2F2F7;
+    font-family: 'Poppins';
+    font-size: 21px;
 }
 
 .playerSlot, .enemySlot {
-    width: 80px;
-    height: 20px;
-    border: 1px solid #000000;
+    justify-content: space-between;
+    align-items: center;
 
-    margin: 0 16px;
-
+    color: #F2F2F7;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
     text-align: center;
+    text-transform: none;
+    text-decoration: none;
+
+    border-radius: 5px;
+    border: 1px solid #F2F2F7;
+
+    width: 100px;
+    min-height: 18px;
+    background-color: #1C1C1E;
+    margin: 8px 0;
+    padding: 8px 0;
 }
 
-scoreBoard h2 {
-    width: 200px;
+.rock, .paper, .scissors {
+    width: 100%;
+    max-width: 100px;
+}
+
+.rock {
+    background-color: #FF9F0A;
+}
+
+.rock:hover, .rock:hover svg g {
+    color: #FF9F0A;
+    background-color: #1C1C1E;
+    border: 1px solid #FF9F0A;
+    outline: none;
+    stroke: #FF9F0A;
+}
+
+
+.paper {
+    background-color: #0A84FF;
+    margin: 8px;
+}
+
+.paper:hover, .paper:hover svg g {
+    color: #0A84FF;
+    background-color: #1C1C1E;
+    border: 1px solid #0A84FF;
+    outline: none;
+    stroke: #0A84FF;
+}
+
+.scissors {
+    background-color: #FF453A;
+}
+
+.scissors:hover, .scissors:hover svg g #path {
+    color: #FF453A;
+    background-color: #1C1C1E;
+    border: 1px solid #FF453A;
+    outline: none;
+    fill: #FF453A;
+}
+
+svg {
+    margin: 0 0 8px 0;
+}
+
+.rock:disabled, .paper:disabled, .scissors:disabled {
+    color: #1C1C1E;
+    background-color: #3A3A3C;
+    border: 1px solid transparent;
+    fill: pink;
 }
